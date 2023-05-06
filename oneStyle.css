@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: 'Poppins', sans-serif;
+}
+
+body {
+ background: linear-gradient(to top, #4444bd, #2a2a72);
+ height: 100vh;
+ width: 100vw;
+ margin: 0;
+ padding: 0;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+}
+.container {
+ padding: 0 1em;
+ width: 100%;
+ max-width: 800px;
+}
+input[type='search'] {
+ width: 100%;
+ border: none;
+ outline: none;
+ border-radius: 0.5em;
+ padding: 0.5em 1em;
+ background: #fff;
+ font-size: 1.2em;
+}
+input[type='search']:focus {
+ box-shadow: 0 0 10px 0 #151538;
+}
+.card {
+ margin-top: 1em;
+ border-radius: 1em;
+ display: grid;
+ grid-template-columns: 1fr;
+ padding: 2em;
+ background: #4c2885;
+ color: #ffffffe1;
+}
+.card404 {
+ margin-top: 1em;
+ border-radius: 1em;
+ padding: 2em;
+ background: #4c2885;
+ color: #ffffffe1;
+ text-align: center;
+}
+#heroContainer {
+ align-self: center;
+ justify-self: center;
+ border-radius: 50%;
+ box-shadow: 0 0 2em 0 #151538;
+ width: 200px;
+ aspect-ratio: 1/1;
+ overflow: hidden;
+ animation: rotate 5s linear infinite;
+}
+#heroContainer:hover {
+ animation-play-state: paused;
+}
+#heroContainer img {
+ width: 100%;
+}
+#informationContainer {
+ margin-top: 1em;
+ display: flex;
+ flex-direction: column;
+ gap: 1em;
+}
+#informationContainer p {
+ display: -webkit-box;
+ -webkit-line-clamp: 3;
+ -webkit-box-orient: vertical;
+ overflow: hidden;
+}
+#numbers {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ font-weight: bolder;
+}
+#reposContainer {
+ display: flex;
+ align-items: center;
+ flex-wrap: wrap;
+ gap: 0.3em;
+ margin-top: 1em;
+}
+#reposContainer a {
+ color: #ffffffe1;
+ text-decoration: none;
+ background: #2a2a72;
+ padding: 0.2em 0.5em;
+ border-radius: 0.5em;
+ font-size: 0.7em;
+}
+@keyframes rotate {
+ 0% {
+  transform: rotate(0deg);
+ }
+ 100% {
+  transform: rotate(360deg);
+ }
+}
+
+.d-none {
+ display: none;
+}
+
+@media screen and (min-width: 426px) {
+ .card {
+  grid-template-columns: 1fr 2fr;
+  gap: 1em;
+ }
+ #heroContainer {
+  width: 100%;
+ }
+}
