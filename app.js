@@ -6,7 +6,12 @@ import NotFound from './Components/NotFound.js';
 let githubUser;
 
 async function getUser(username) {
- const USER_RESPONSE = await fetch(`${API_URL}${username}`);
+ const USER_RESPONSE = await fetch(`${API_URL}${username}`, {
+  headers: {
+   'Content-Type': 'application/json',
+  },
+  method: 'GET',
+ });
  if (USER_RESPONSE.status === 404) {
   card404();
  } else {
